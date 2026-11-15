@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>RM iPhones — Especialistas Apple | Novos & Seminovos Selecionados</title>
+  <meta name="description" content="RM iPhones: Especialistas em Apple. iPhones novos lacrados com 1 ano de garantia Apple e seminovos selecionados com bateria informada, checklist de 35 itens e troca inteligente em até 18x." />
+  <meta name="keywords" content="iPhone 16, iPhone 15, iPhone 14, seminovos, Apple Watch, AirPods, troca de iPhone, RM iPhones" />
+  <meta name="theme-color" content="#080808" />
+  <link rel="canonical" href="https://portfolio-rm-iphones.pages.dev" />
+
+  <!-- Open Graph / Redes Sociais -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://portfolio-rm-iphones.pages.dev" />
+  <meta property="og:title" content="RM iPhones — Catálogo Oficial & Vitrine Apple" />
+  <meta property="og:description" content="Seu iPhone novo está aqui. Novos lacrados e seminovos impecáveis com garantia formalizada e laudo de bateria." />
+  <meta property="og:image" content="/img/logo-original.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="apple-touch-icon" href="/favicon.png" />
+
+  <!-- Preload do Vídeo e Poster do Hero Cinematográfico da Tec2D -->
+  <link rel="preload" as="image" href="/video/tec2d-scroll/tec2d-scroll-poster-dark.webp" />
+  <link rel="preload" as="video" href="/video/tec2d-scroll/tec2d-scroll-desktop-dark.mp4" type="video/mp4" />
+  <link rel="preload" as="image" href="/img/logo-dark.png" />
+  <link rel="stylesheet" href="/css/styles.css?v=3.8" />
+
+  <!-- Fontes do Sistema Apple & Tipografia de Grife -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ==================== HEADER GLASSMORPHISM ==================== -->
+  <header class="header">
+    <div class="container navbar">
+      <a href="#hero" class="brand" aria-label="RM iPhones Página Inicial">
+        <img src="/img/logo-dark.png" alt="RM iPhones Logotipo Oficial" width="42" height="42" />
+        <div class="brand-text">
+          <span class="brand-title">RM IPHONES</span>
+          <span class="brand-subtitle">ESPECIALISTAS APPLE</span>
+        </div>
+      </a>
+
+      <!-- Menu Desktop -->
+      <ul class="nav-links">
+        <li><a href="#hero" class="nav-link active">Início</a></li>
+        <li><a href="#catalogo" class="nav-link">Estoque</a></li>
+        <li><a href="#troca" class="nav-link">Troca Smart</a></li>
+        <li><a href="#qualidade" class="nav-link">Checklist 35 Itens</a></li>
+        <li><a href="#depoimentos" class="nav-link">Clientes (+107K)</a></li>
+        <li><a href="#faq" class="nav-link">Dúvidas</a></li>
+      </ul>
+
+      <!-- Ações do Header -->
+      <div class="header-actions">
+        <span class="status-indicator">
+          <span class="pulse-dot"></span>
+          Online agora
+        </span>
+
+        <a href="https://wa.me/5511999990000?text=Ol%C3%A1%2C%20RM%20iPhones!%20Vim%20pelo%20site%20e%20gostaria%20de%20consultar%20o%20estoque." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-sm" id="headerWaBtn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.599 2.679-.702c.97.546 1.761.821 2.781.821 3.182 0 5.767-2.587 5.768-5.766.001-3.182-2.585-5.768-5.768-5.768zm3.364 8.163c-.14.394-.716.744-1.026.786-.31.042-.656.069-2.023-.497-1.368-.567-2.327-1.921-2.42-2.046-.094-.125-.758-1.009-.758-1.923 0-.914.478-1.365.647-1.551.17-.186.371-.233.495-.233.124 0 .248.002.355.008.113.006.265-.043.414.316.155.372.531 1.295.578 1.389.047.094.078.203.016.328-.063.125-.094.203-.188.312-.094.109-.198.243-.283.326-.094.092-.192.193-.083.38.109.188.484.798 1.04 1.293.715.637 1.317.834 1.504.927.188.094.298.079.407-.047.11-.125.469-.547.594-.734.125-.188.25-.156.422-.094.172.063 1.094.516 1.281.609.188.094.313.141.359.219.047.078.047.453-.093.847z"/>
+          </svg>
+          Chamar no WhatsApp
+        </a>
+
+        <!-- Botão Mobile -->
+        <button type="button" class="mobile-toggle" id="mobileToggle" aria-label="Abrir Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Navegação Mobile Dropdown -->
+    <nav id="mobileNav" style="display: none; background: #0c0e15; border-bottom: 1px solid var(--border-subtle); padding: 20px;">
+      <ul style="list-style: none; display: flex; flex-direction: column; gap: 16px;">
+        <li><a href="#hero" class="mobile-nav-link" style="font-size: 1.05rem; font-weight: 600;">Início</a></li>
+        <li><a href="#catalogo" class="mobile-nav-link" style="font-size: 1.05rem; font-weight: 600;">Estoque & Catálogo</a></li>
+        <li><a href="#troca" class="mobile-nav-link" style="font-size: 1.05rem; font-weight: 600;">Troca Inteligente</a></li>
+        <li><a href="#qualidade" class="mobile-nav-link" style="font-size: 1.05rem; font-weight: 600;">Checklist de 35 Itens</a></li>
+        <li><a href="#depoimentos" class="mobile-nav-link" style="font-size: 1.05rem; font-weight: 600;">Clientes & Instagram (+107K)</a></li>
+        <li><a href="#faq" class="mobile-nav-link" style="font-size: 1.05rem; font-weight: 600;">Dúvidas Frequentes</a></li>
+        <li style="padding-top: 10px;">
+          <a href="https://wa.me/5511999990000" target="_blank" class="btn btn-whatsapp" style="width: 100%;">
+            Falar com Atendente
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ==================== HERO CINEMATOGRÁFICO SCROLL-DRIVEN (PADRÃO TEC2D) ==================== -->
+  <section id="hero" class="t2d-cine" data-mode="video" aria-labelledby="cine-title">
+    <div class="t2d-cine-stage">
+      
+      <!-- Textos Sequenciais Apple que Acompanham a Rotação 3D (Coluna 1) -->
+      <div class="t2d-cine-copy">
+        <p class="t2d-cine-kicker">RM IPHONES • ESPECIALISTAS APPLE</p>
+        
+        <div class="t2d-cine-lines">
+          <h1 class="t2d-cine-line is-active" id="cine-title" style="opacity: 1; transform: translate3d(0, 0, 0);">
+            Seu próximo <em>upgrade</em> começa aqui.
+          </h1>
+          <p class="t2d-cine-line" aria-hidden="true">
+            Do detalhe à <em>experiência<span class="t2d-cine-stop">.</span></em>
+          </p>
+          <p class="t2d-cine-line" aria-hidden="true">
+            Cada detalhe no <em>lugar certo<span class="t2d-cine-stop">.</span></em>
+          </p>
+          <p class="t2d-cine-line" aria-hidden="true">
+            Você escolhe. A <em>RM iPhones</em> cuida.
+          </p>
+        </div>
+
+        <p class="t2d-cine-support" style="opacity: 1; transform: translate3d(0, 0, 0);">
+          Aparelhos novos lacrados, seminovos selecionados e procedência auditada com garantia formalizada.
+        </p>
+
+        <!-- Barra de Progresso Cinematográfica -->
+        <div class="t2d-cine-rail" aria-hidden="true">
+          <i></i>
+        </div>
+
+        <p class="t2d-cine-status" aria-live="polite"></p>
+      </div>
+
+      <!-- Frame de Vídeo do iPhone Sincronizado com o Scroll (Coluna 2) -->
+      <div class="t2d-cine-frame">
+        <video 
+          class="t2d-cine-video" 
+          src="/video/tec2d-scroll/tec2d-scroll-desktop-dark.mp4"
+          poster="/video/tec2d-scroll/tec2d-scroll-poster-dark.webp"
+          muted 
+          playsinline 
+          preload="auto" 
+          aria-hidden="true" 
+          tabindex="-1"
+        >
+          <source src="/video/tec2d-scroll/tec2d-scroll-desktop-dark.mp4" type="video/mp4" />
+        </video>
+        <img 
+          src="/video/tec2d-scroll/tec2d-scroll-final-dark.webp" 
+          alt="iPhone Titânio RM iPhones" 
+          class="t2d-cine-fallback" 
+          loading="lazy" 
+          decoding="async" 
+        />
+      </div>
+
+      <!-- Indicador Inferior Central de Scroll -->
+      <div class="t2d-cine-cue" aria-hidden="true">
+        <span></span>Role para avançar
+      </div>
+
+      <!-- Véu de Transição para a Próxima Seção -->
+      <div class="t2d-cine-veil" aria-hidden="true"></div>
+
+    </div>
+  </section>
+
+  <!-- ==================== CONTEÚDO PRINCIPAL PÓS-CINEMA (PADRÃO TEC2D) ==================== -->
+  <div class="home-content-after-cinema">
+    
+    <!-- Barra de Ações Rápidas Pós-Hero -->
+    <div class="container" style="padding-top: 10px; padding-bottom: 20px;">
+      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; margin-bottom: 20px;">
+        <a href="#catalogo" class="btn btn-primary" style="padding: 14px 30px; font-size: 1rem;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+            <line x1="12" y1="18" x2="12.01" y2="18"></line>
+          </svg>
+          Ver Estoque em Tempo Real
+        </a>
+
+        <a href="#troca" class="btn btn-secondary" style="padding: 14px 28px; font-size: 1rem;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <polyline points="17 1 21 5 17 9"></polyline>
+            <path d="M3 11V9a4 4 0 0 1 4-4h14"></path>
+            <polyline points="7 23 3 19 7 15"></polyline>
+            <path d="M21 13v2a4 4 0 0 1-4 4H3"></path>
+          </svg>
+          Simular Troca do Meu Usado
+        </a>
+
+        <a href="https://wa.me/5511999990000?text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20um%20especialista%20da%20RM%20iPhones." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" style="padding: 14px 28px; font-size: 1rem;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.599 2.679-.702c.97.546 1.761.821 2.781.821 3.182 0 5.767-2.587 5.768-5.768.001-3.182-2.585-5.768-5.768-5.768zm3.364 8.163c-.14.394-.716.744-1.026.786-.31.042-.656.069-2.023-.497-1.368-.567-2.327-1.921-2.42-2.046-.094-.125-.758-1.009-.758-1.923 0-.914.478-1.365.647-1.551.17-.186.371-.233.495-.233.124 0 .248.002.355.008.113.006.265-.043.414.316.155.372.531 1.295.578 1.389.047.094.078.203.016.328-.063.125-.094.203-.188.312-.094.109-.198.243-.283.326-.094.092-.192.193-.083.38.109.188.484.798 1.04 1.293.715.637 1.317.834 1.504.927.188.094.298.079.407-.047.11-.125.469-.547.594-.734.125-.188.25-.156.422-.094.172.063 1.094.516 1.281.609.188.094.313.141.359.219.047.078.047.453-.093.847z"/>
+          </svg>
+          Chamar no WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PILARES DE AUTORIDADE ==================== -->
+  <section class="pillars" id="diferenciais">
+    <div class="container">
+      <div class="pillars-grid">
+        
+        <div class="pillar-card">
+          <div class="pillar-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              <path d="M9 12l2 2 4-4"></path>
+            </svg>
+          </div>
+          <h3 class="pillar-title">Checklist de 35 Itens</h3>
+          <p class="pillar-desc">
+            Cada aparelho seminovo passa por rigorosa inspeção eletrônica em bancada: Face ID, câmeras, sensores e placas 100% originais.
+          </p>
+        </div>
+
+        <div class="pillar-card">
+          <div class="pillar-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="7" width="16" height="10" rx="2" ry="2"></rect>
+              <line x1="22" y1="11" x2="22" y2="13"></line>
+              <line x1="6" y1="11" x2="10" y2="11"></line>
+            </svg>
+          </div>
+          <h3 class="pillar-title">Saúde de Bateria Real</h3>
+          <p class="pillar-desc">
+            Sem surpresas. A saúde exata da bateria de cada aparelho é informada com clareza em cada anúncio e laudo técnico.
+          </p>
+        </div>
+
+        <div class="pillar-card">
+          <div class="pillar-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="17 1 21 5 17 9"></polyline>
+              <path d="M3 11V9a4 4 0 0 1 4-4h14"></path>
+              <polyline points="7 23 3 19 7 15"></polyline>
+              <path d="M21 13v2a4 4 0 0 1-4 4H3"></path>
+            </svg>
+          </div>
+          <h3 class="pillar-title">Troca Smart Facilitada</h3>
+          <p class="pillar-desc">
+            Seu iPhone usado vale como entrada com a melhor avaliação do mercado para você subir de modelo gastando muito menos.
+          </p>
+        </div>
+
+        <div class="pillar-card">
+          <div class="pillar-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="8" r="7"></circle>
+              <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+            </svg>
+          </div>
+          <h3 class="pillar-title">Garantia Formalizada</h3>
+          <p class="pillar-desc">
+            Garantia oficial de 1 ano para novos lacrados e termo formal de garantia da loja para seminovos revisados.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CATÁLOGO EM TEMPO REAL ==================== -->
+  <section class="catalog-section" id="catalogo">
+    <div class="container">
+      
+      <!-- Cabeçalho do Catálogo -->
+      <div class="catalog-header">
+        <div>
+          <span class="section-tag">Estoque Atualizado Hoje</span>
+          <h2 class="section-title">Aparelhos Disponíveis na Vitrine</h2>
+          <p class="section-subtitle">
+            Fotos reais do aparelho exato que você vai receber. Escolha o seu modelo, confira a saúde da bateria e feche direto pelo WhatsApp.
+          </p>
+        </div>
+        <div>
+          <span class="badge-label" id="productCount">Carregando aparelhos...</span>
+        </div>
+      </div>
+
+      <!-- Controles: Busca, Ordenação e Abas de Categoria -->
+      <div class="catalog-controls">
+        <div class="search-and-sort">
+          <div class="search-box">
+            <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input type="text" id="searchInput" placeholder="Buscar por modelo (ex: 16 Pro, 15, Titânio, 256GB)..." />
+          </div>
+
+          <div class="sort-box">
+            <select id="sortSelect" aria-label="Ordenar produtos">
+              <option value="default">Destaques da vitrine</option>
+              <option value="price-asc">Menor preço primeiro</option>
+              <option value="price-desc">Maior preço primeiro</option>
+              <option value="battery-desc">Maior saúde de bateria</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Abas de Categorias -->
+        <div class="category-tabs" role="tablist">
+          <button type="button" class="tab-btn active" data-category="all">Todos os Aparelhos</button>
+          <button type="button" class="tab-btn" data-category="linha-16">Linha iPhone 16</button>
+          <button type="button" class="tab-btn" data-category="linha-15">Linha iPhone 15</button>
+          <button type="button" class="tab-btn" data-category="linha-14">Linha iPhone 14</button>
+          <button type="button" class="tab-btn" data-category="linha-13">Linha iPhone 13</button>
+          <button type="button" class="tab-btn" data-category="watch-airpods">Apple Watch & AirPods</button>
+          <button type="button" class="tab-btn" data-category="acessorios">Acessórios Originais</button>
+        </div>
+      </div>
+
+      <!-- Grid de Cards de Produtos (Renderizado Dinamicamente pelo app.js) -->
+      <div class="product-grid" id="productGrid">
+        <!-- Renderizado pelo app.js -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== SIMULADOR DE TROCA INTELIGENTE (TRADE-IN) ==================== -->
+  <section class="trade-section" id="troca">
+    <div class="container">
+      <div class="trade-card">
+        <div class="trade-grid">
+          
+          <!-- Formulário do Trade-In -->
+          <div class="trade-form">
+            <span class="section-tag">Troca Inteligente RM iPhones</span>
+            <h2 class="section-title" style="font-size: 2.2rem;">
+              Seu iPhone Usado Vale Como Entrada
+            </h2>
+            <p style="color: var(--text-secondary); margin-bottom: 10px;">
+              Simule em segundos quanto vale o seu aparelho atual e veja o quanto economiza no modelo mais novo.
+            </p>
+
+            <div class="form-group">
+              <label class="form-label" for="tradeMyModel">Qual modelo você tem hoje?</label>
+              <select id="tradeMyModel">
+                <!-- Preenchido dinamicamente via JS -->
+              </select>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="tradeCondition">Estado de conservação:</label>
+                <select id="tradeCondition">
+                  <option value="1.0">Impecável (sem marcas)</option>
+                  <option value="0.9">Muito Bom (leves marcas de uso)</option>
+                  <option value="0.8">Marcas visíveis (sem trincos)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="tradeBattery">Saúde da bateria do seu:</label>
+                <select id="tradeBattery">
+                  <option value="1.0">Acima de 85%</option>
+                  <option value="0.93">Entre 80% e 84%</option>
+                  <option value="0.85">Abaixo de 80% (troca recomendada)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="tradeTargetModel">Qual modelo você deseja levar da vitrine?</label>
+              <select id="tradeTargetModel">
+                <!-- Preenchido dinamicamente via JS -->
+              </select>
+            </div>
+          </div>
+
+          <!-- Resultado do Trade-In -->
+          <div class="trade-result">
+            <span class="trade-result-header">Valor Estimado de Entrada</span>
+            
+            <div class="trade-value-box">
+              <span class="val" id="tradeEstimatedValue">R$ 2.400</span>
+              <span class="desc">Bônus de avaliação aplicado</span>
+            </div>
+
+            <div id="tradeDifferenceValue" style="padding: 14px; background: rgba(255,255,255,0.04); border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
+              Diferença a pagar: <strong>R$ 2.190</strong>
+            </div>
+
+            <a href="#" id="tradeWhatsAppBtn" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" style="width: 100%;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.599 2.679-.702c.97.546 1.761.821 2.781.821 3.182 0 5.767-2.587 5.768-5.768.001-3.182-2.585-5.768-5.768-5.768zm3.364 8.163c-.14.394-.716.744-1.026.786-.31.042-.656.069-2.023-.497-1.368-.567-2.327-1.921-2.42-2.046-.094-.125-.758-1.009-.758-1.923 0-.914.478-1.365.647-1.551.17-.186.371-.233.495-.233.124 0 .248.002.355.008.113.006.265-.043.414.316.155.372.531 1.295.578 1.389.047.094.078.203.016.328-.063.125-.094.203-.188.312-.094.109-.198.243-.283.326-.094.092-.192.193-.083.38.109.188.484.798 1.04 1.293.715.637 1.317.834 1.504.927.188.094.298.079.407-.047.11-.125.469-.547.594-.734.125-.188.25-.156.422-.094.172.063 1.094.516 1.281.609.188.094.313.141.359.219.047.078.047.453-.093.847z"/>
+              </svg>
+              Enviar Proposta no WhatsApp
+            </a>
+
+            <!-- 3 Passos da Troca -->
+            <div class="trade-steps">
+              <div class="trade-step-item">
+                <span class="trade-step-num">1</span>
+                <span class="trade-step-text">Envie fotos e detalhes pelo WhatsApp</span>
+              </div>
+              <div class="trade-step-item">
+                <span class="trade-step-num">2</span>
+                <span class="trade-step-text">Confirmamos a avaliação na hora</span>
+              </div>
+              <div class="trade-step-item">
+                <span class="trade-step-num">3</span>
+                <span class="trade-step-text">Receba seu iPhone com garantia</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SIMULADOR DE PARCELAMENTO EM ATÉ 18X ==================== -->
+  <section class="container" style="padding: 70px 20px;">
+    <div style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-xl); padding: 40px; display: grid; grid-template-columns: 1fr; gap: 30px;">
+      <div style="text-align: center; max-width: 600px; margin: 0 auto;">
+        <span class="section-tag">Pagamento Facilitado</span>
+        <h2 class="section-title" style="font-size: 2.2rem;">Simulador de Parcelamento no Cartão</h2>
+        <p class="section-subtitle" style="margin: 0 auto;">
+          Transparência absoluta. Parcele seu iPhone em até 18x com taxas reduzidas.
+        </p>
+
+        <div style="margin-top: 24px; display: inline-flex; align-items: center; gap: 12px; background: var(--bg-input); padding: 8px 18px; border-radius: var(--radius-full); border: 1px solid var(--border-subtle);">
+          <span style="font-weight: 700; color: var(--accent-titanium);">Valor a Simular: R$</span>
+          <input type="number" id="calcAmountInput" value="3500" step="100" style="width: 140px; background: transparent; border: none; font-size: 1.2rem; font-weight: 800; padding: 0; color: #fff;" />
+        </div>
+      </div>
+
+      <div id="installmentsTable" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px;">
+        <!-- Renderizado pelo app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CHECKLIST DE 35 ITENS (PADRÃO TEC2D) ==================== -->
+  <section class="checklist-section" id="qualidade">
+    <div class="container">
+      <div style="text-align: center; max-width: 700px; margin: 0 auto 50px;">
+        <span class="section-tag">Padrão Técnico de Bancada</span>
+        <h2 class="section-title">Checklist Rigoroso de 35 Itens</h2>
+        <p class="section-subtitle" style="margin: 0 auto;">
+          Nenhum iPhone entra em nosso catálogo sem ser 100% auditado. Garantia de que cada sensor, tela e componente está funcionando perfeitamente.
+        </p>
+      </div>
+
+      <div class="checklist-grid">
+        
+        <!-- Pilar 1 -->
+        <div class="check-pillar">
+          <div class="pillar-header">
+            <svg class="pillar-header-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"></path>
+              <circle cx="12" cy="12" r="3"></circle>
+            </svg>
+            <h4>Biometria & Tela</h4>
+          </div>
+          <ul class="check-list">
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Face ID / Touch ID 100%</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> TrueTone e sensor de luz</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Touch em toda a grade</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Sem burn-in ou dead pixels</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Taxa 120Hz ProMotion</li>
+          </ul>
+        </div>
+
+        <!-- Pilar 2 -->
+        <div class="check-pillar">
+          <div class="pillar-header">
+            <svg class="pillar-header-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+              <circle cx="12" cy="13" r="4"></circle>
+            </svg>
+            <h4>Câmeras & Óptica</h4>
+          </div>
+          <ul class="check-list">
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Foco automático contínuo</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Lente Ultra-Angular (0.5x)</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Telefoto com zoom óptico</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Estabilização OIS de sensor</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Modo Retrato & Noturno</li>
+          </ul>
+        </div>
+
+        <!-- Pilar 3 -->
+        <div class="check-pillar">
+          <div class="pillar-header">
+            <svg class="pillar-header-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+            </svg>
+            <h4>Bateria & Carga</h4>
+          </div>
+          <ul class="check-list">
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Contagem de ciclos atestada</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Sem superaquecimento térmico</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Carregamento MagSafe sem fio</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Conector USB-C / Lightning limpo</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Retenção de carga testada 24h</li>
+          </ul>
+        </div>
+
+        <!-- Pilar 4 -->
+        <div class="check-pillar">
+          <div class="pillar-header">
+            <svg class="pillar-header-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12.55a11 11 0 0 1 14.08 0"></path>
+              <path d="M1.42 9a16 16 0 0 1 21.16 0"></path>
+              <path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path>
+              <line x1="12" y1="20" x2="12.01" y2="20"></line>
+            </svg>
+            <h4>Conexão & Áudio</h4>
+          </div>
+          <ul class="check-list">
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> 5G e Wi-Fi 6/7 homologados</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Alto-falantes estéreo limpos</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Microfones com isolamento</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Bluetooth com alcance total</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Desbloqueado para qualquer operadora</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PROVA SOCIAL & INSTAGRAM OFICIAL (+107K) ==================== -->
+  <section class="social-proof-section" id="depoimentos">
+    <div class="container">
+      
+      <!-- Card Oficial do Instagram -->
+      <div class="insta-header-card">
+        <div class="insta-profile-info">
+          <div class="insta-avatar">
+            <img src="/img/logo-original.png" alt="RM iPhones Instagram Oficial" />
+          </div>
+          <div>
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <span class="insta-handle">@rmiphonesbr</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#2997ff"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            </div>
+            <p style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 2px;">
+              Seu iPhone novo está aqui 🍎📱 • Loja Especializada Apple
+            </p>
+            <div class="insta-stats">
+              <span><strong>107K</strong> seguidores</span>
+              <span><strong>5.551</strong> publicações</span>
+              <span><strong>4.9★</strong> avaliação</span>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <a href="https://www.instagram.com/rmiphonesbr/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="border-radius: var(--radius-full);">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+            </svg>
+            Seguir @rmiphonesbr
+          </a>
+        </div>
+      </div>
+
+      <!-- Galeria 100% Exclusiva com Fotos Reais dos Posts e Clientes da RM iPhones -->
+      <div style="margin-bottom: 24px;">
+        <h3 style="font-size: 1.4rem; font-weight: 700; color: #fff;">Entregas & Clientes Realizados</h3>
+        <p style="font-size: 0.95rem; color: var(--text-secondary);">Fotos reais de clientes retirando seus aparelhos conosco na RM iPhones.</p>
+      </div>
+
+      <div class="insta-gallery">
+        <div class="insta-item">
+          <img src="/img/rm-instagram/rm-post-4.jpg" alt="Cliente com sacola oficial RM iPhones" loading="lazy" />
+          <div class="insta-overlay">
+            <span>Cliente RM</span>
+            <span>⭐ 5.0</span>
+          </div>
+        </div>
+        <div class="insta-item">
+          <img src="/img/rm-instagram/rm-post-5.jpg" alt="Cliente satisfeita RM iPhones" loading="lazy" />
+          <div class="insta-overlay">
+            <span>Entrega VIP</span>
+            <span>⭐ 5.0</span>
+          </div>
+        </div>
+        <div class="insta-item">
+          <img src="/img/rm-instagram/rm-post-6.jpg" alt="Cliente com iPhone novo RM iPhones" loading="lazy" />
+          <div class="insta-overlay">
+            <span>Novo iPhone</span>
+            <span>⭐ 5.0</span>
+          </div>
+        </div>
+        <div class="insta-item">
+          <img src="/img/rm-instagram/rm-post-7.jpg" alt="Cliente com caixa lacrada RM iPhones" loading="lazy" />
+          <div class="insta-overlay">
+            <span>Lacrado 1 Ano</span>
+            <span>⭐ 5.0</span>
+          </div>
+        </div>
+        <div class="insta-item">
+          <img src="/img/rm-instagram/rm-post-8.jpg" alt="Cliente retirando iPhone na RM" loading="lazy" />
+          <div class="insta-overlay">
+            <span>Cliente Feliz</span>
+            <span>⭐ 5.0</span>
+          </div>
+        </div>
+        <div class="insta-item">
+          <img src="/img/rm-instagram/rm-post-9.jpg" alt="Cliente com sacola e acessórios RM iPhones" loading="lazy" />
+          <div class="insta-overlay">
+            <span>Combo VIP</span>
+            <span>⭐ 5.0</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== PERGUNTAS FREQUENTES (FAQ COM SVG LIMPO) ==================== -->
+  <section class="faq-section" id="faq">
+    <div class="container">
+      <div style="text-align: center; max-width: 650px; margin: 0 auto 50px;">
+        <span class="section-tag">Tire Suas Dúvidas</span>
+        <h2 class="section-title">Perguntas Frequentes</h2>
+        <p class="section-subtitle" style="margin: 0 auto;">
+          Tudo o que você precisa saber sobre procedência, garantias, envios e formas de pagamento.
+        </p>
+      </div>
+
+      <div class="faq-list">
+        
+        <div class="faq-item open">
+          <button type="button" class="faq-question">
+            <span>Os iPhones são originais e desbloqueados?</span>
+            <span class="faq-chevron">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </span>
+          </button>
+          <div class="faq-answer">
+            Sim, 100% originais Apple e homologados pela Anatel. Não trabalhamos com peças recondicionadas genéricas ou aparelhos de procedência duvidosa. Todos são desbloqueados para qualquer operadora do mundo.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button type="button" class="faq-question">
+            <span>Como funciona a garantia dos aparelhos?</span>
+            <span class="faq-chevron">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </span>
+          </button>
+          <div class="faq-answer">
+            Para aparelhos <strong>Novos Lacrados</strong>, você conta com 1 ano completo de garantia oficial mundial Apple direto nas autorizadas. Para <strong>Seminovos</strong>, emitimos termo de garantia formal da RM iPhones de 90 dias a 6 meses com laudo técnico de bancada de 35 itens.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button type="button" class="faq-question">
+            <span>Como funciona a Troca Smart (meu usado como entrada)?</span>
+            <span class="faq-chevron">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </span>
+          </button>
+          <div class="faq-answer">
+            Você faz a simulação no site ou manda fotos e o modelo do seu iPhone atual pelo nosso WhatsApp. Nossa equipe avalia na hora e você paga apenas a diferença, podendo parcelar o saldo restante em até 18x no cartão de crédito!
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button type="button" class="faq-question">
+            <span>Vocês enviam para todo o Brasil? Como é feita a entrega?</span>
+            <span class="faq-chevron">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </span>
+          </button>
+          <div class="faq-answer">
+            Sim! Enviamos para todo o Brasil via Sedex com seguro total contra roubo/extravio e código de rastreamento em tempo real. Para quem está na região, disponibilizamos retirada expressa em mãos com agendamento VIP.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button type="button" class="faq-question">
+            <span>Quais são as formas de pagamento aceitas?</span>
+            <span class="faq-chevron">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </span>
+          </button>
+          <div class="faq-answer">
+            Aceitamos Pix com desconto especial à vista, cartão de crédito em até 18x (podendo dividir o valor em 2 ou mais cartões), e seu iPhone usado como parte do pagamento.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  </div><!-- /home-content-after-cinema -->
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <div class="footer-brand">
+          <div class="brand">
+            <img src="/img/logo-dark.png" alt="RM iPhones" width="38" height="38" />
+            <span class="brand-title" style="font-size: 1.1rem;">RM IPHONES</span>
+          </div>
+          <p>
+            Especialistas em produtos Apple novos e seminovos selecionados. Transparência, procedência auditada e atendimento de excelência.
+          </p>
+          <div style="display: flex; gap: 12px; margin-top: 8px;">
+            <a href="https://www.instagram.com/rmiphonesbr/" target="_blank" style="color: var(--text-secondary);" title="Instagram @rmiphonesbr">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="https://wa.me/5511999990000" target="_blank" style="color: var(--text-secondary);" title="WhatsApp Oficial">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.599 2.679-.702c.97.546 1.761.821 2.781.821 3.182 0 5.767-2.587 5.768-5.768.001-3.182-2.585-5.768-5.768-5.768zm3.364 8.163c-.14.394-.716.744-1.026.786-.31.042-.656.069-2.023-.497-1.368-.567-2.327-1.921-2.42-2.046-.094-.125-.758-1.009-.758-1.923 0-.914.478-1.365.647-1.551.17-.186.371-.233.495-.233.124 0 .248.002.355.008.113.006.265-.043.414.316.155.372.531 1.295.578 1.389.047.094.078.203.016.328-.063.125-.094.203-.188.312-.094.109-.198.243-.283.326-.094.092-.192.193-.083.38.109.188.484.798 1.04 1.293.715.637 1.317.834 1.504.927.188.094.298.079.407-.047.11-.125.469-.547.594-.734.125-.188.25-.156.422-.094.172.063 1.094.516 1.281.609.188.094.313.141.359.219.047.078.047.453-.093.847z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h4>Navegação</h4>
+          <ul class="footer-links">
+            <li><a href="#hero">Página Inicial</a></li>
+            <li><a href="#catalogo">Estoque Completo</a></li>
+            <li><a href="#troca">Troca Smart</a></li>
+            <li><a href="#qualidade">Laudo Técnico</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Gerações</h4>
+          <ul class="footer-links">
+            <li><a href="#catalogo">iPhone Linha 16</a></li>
+            <li><a href="#catalogo">iPhone Linha 15</a></li>
+            <li><a href="#catalogo">iPhone Linha 14</a></li>
+            <li><a href="#catalogo">Apple Watch & AirPods</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Atendimento VIP</h4>
+          <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6;">
+            Segunda a Sábado: 09h às 20h<br />
+            WhatsApp: (11) 99999-0000<br />
+            Instagram: @rmiphonesbr
+          </p>
+          <div style="margin-top: 14px;">
+            <a href="https://wa.me/5511999990000" target="_blank" class="btn btn-whatsapp btn-sm" style="width: 100%;">
+              Falar no WhatsApp
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 RM iPhones. Todos os direitos reservados. Apple é uma marca registrada da Apple Inc.</span>
+        <span>Desenvolvido com excelência por <strong>Venoy Studio</strong> 💙</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== BOTÃO FLUTUANTE WHATSAPP ==================== -->
+  <div class="wa-floating-container">
+    <div class="wa-card-popup" id="waPopup" style="display: none;">
+      <div style="width: 44px; height: 44px; border-radius: 50%; overflow: hidden; flex-shrink: 0; border: 2px solid var(--whatsapp);">
+        <img src="/img/logo-dark.png" alt="Consultor RM iPhones" style="width: 100%; height: 100%; object-fit: contain; background: #000;" />
+      </div>
+      <div style="flex: 1;">
+        <div style="display: flex; justify-content: space-between; align-items: baseline;">
+          <strong style="font-size: 0.85rem; color: #fff;">Equipe RM iPhones</strong>
+          <button type="button" id="waPopupClose" style="color: var(--text-muted); font-size: 0.8rem; cursor: pointer;">✕</button>
+        </div>
+        <p style="font-size: 0.78rem; color: var(--text-secondary); margin-top: 2px; line-height: 1.3;">
+          Olá! Quer consultar o estoque ou avaliar seu usado na troca? Estamos online!
+        </p>
+      </div>
+    </div>
+
+    <a href="https://wa.me/5511999990000?text=Ol%C3%A1%2C%20RM%20iPhones!%20Vim%20pelo%20site%20e%20gostaria%20de%20tirar%20uma%20d%C3%BAvida." target="_blank" rel="noopener noreferrer" class="wa-float-btn" aria-label="Abrir WhatsApp">
+      <span class="wa-unread-badge">1</span>
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.599 2.679-.702c.97.546 1.761.821 2.781.821 3.182 0 5.767-2.587 5.768-5.768.001-3.182-2.585-5.768-5.768-5.768zm3.364 8.163c-.14.394-.716.744-1.026.786-.31.042-.656.069-2.023-.497-1.368-.567-2.327-1.921-2.42-2.046-.094-.125-.758-1.009-.758-1.923 0-.914.478-1.365.647-1.551.17-.186.371-.233.495-.233.124 0 .248.002.355.008.113.006.265-.043.414.316.155.372.531 1.295.578 1.389.047.094.078.203.016.328-.063.125-.094.203-.188.312-.094.109-.198.243-.283.326-.094.092-.192.193-.083.38.109.188.484.798 1.04 1.293.715.637 1.317.834 1.504.927.188.094.298.079.407-.047.11-.125.469-.547.594-.734.125-.188.25-.156.422-.094.172.063 1.094.516 1.281.609.188.094.313.141.359.219.047.078.047.453-.093.847z"/>
+      </svg>
+    </a>
+  </div>
+
+  <!-- ==================== MODAL DE DETALHES VIP ==================== -->
+  <div class="modal-overlay" id="productModal">
+    <div class="modal-container">
+      <button type="button" class="modal-close" id="modalCloseBtn" aria-label="Fechar Modal">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      
+      <div class="modal-grid">
+        <!-- Galeria de Fotos Reais -->
+        <div class="modal-gallery">
+          <div class="modal-main-img">
+            <img src="" id="modalMainImg" alt="iPhone" />
+          </div>
+          <div class="modal-thumbs" id="modalThumbs">
+            <!-- Miniaturas via JS -->
+          </div>
+        </div>
+
+        <!-- Informações e Ação -->
+        <div class="modal-details">
+          <div>
+            <span class="section-tag" id="modalCode">CÓDIGO: #</span>
+            <h2 id="modalTitle" style="font-size: 1.8rem; font-weight: 800; color: #fff; margin-bottom: 8px;"></h2>
+            <span class="badge-label" id="modalBadge" style="margin-bottom: 14px;"></span>
+            
+            <p id="modalDesc" style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; margin-bottom: 16px;"></p>
+
+            <ul class="modal-specs-list" id="modalSpecs">
+              <!-- Preenchido via JS -->
+            </ul>
+          </div>
+
+          <div style="margin-top: 20px; padding-top: 18px; border-top: 1px solid var(--border-subtle);">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 16px;">
+              <div>
+                <span id="modalPricePix" style="font-size: 1.8rem; font-weight: 800; color: #fff; letter-spacing: -0.02em;"></span>
+                <span style="font-size: 0.85rem; color: var(--accent-green); font-weight: 700; display: block;">à vista no Pix</span>
+              </div>
+              <span id="modalPriceCard" style="font-size: 0.9rem; color: var(--text-secondary);"></span>
+            </div>
+
+            <a href="#" id="modalWhatsAppBtn" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" style="width: 100%; font-size: 1.05rem; padding: 16px;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.599 2.679-.702c.97.546 1.761.821 2.781.821 3.182 0 5.767-2.587 5.768-5.768.001-3.182-2.585-5.768-5.768-5.768zm3.364 8.163c-.14.394-.716.744-1.026.786-.31.042-.656.069-2.023-.497-1.368-.567-2.327-1.921-2.42-2.046-.094-.125-.758-1.009-.758-1.923 0-.914.478-1.365.647-1.551.17-.186.371-.233.495-.233.124 0 .248.002.355.008.113.006.265-.043.414.316.155.372.531 1.295.578 1.389.047.094.078.203.016.328-.063.125-.094.203-.188.312-.094.109-.198.243-.283.326-.094.092-.192.193-.083.38.109.188.484.798 1.04 1.293.715.637 1.317.834 1.504.927.188.094.298.079.407-.047.11-.125.469-.547.594-.734.125-.188.25-.156.422-.094.172.063 1.094.516 1.281.609.188.094.313.141.359.219.047.078.047.453-.093.847z"/>
+              </svg>
+              Fechar Negócio no WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts Modulares (App & Hero Cinematográfico) -->
+  <script type="module" src="/js/app.js?v=2.2"></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+{
+  "name": "portfolio-rm-iphones",
+  "version": "1.0.0",
+  "description": "RM iPhones — Catálogo Oficial de iPhones Novos e Seminovos Selecionados",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "build": "echo 'Static site ready for Cloudflare Pages'"
+  },
+  "keywords": [
+    "portfolio",
+    "landing-page",
+    "venoy-studio",
+    "rm-iphones",
+    "apple",
+    "smartphones"
+  ],
+  "author": "Venoy Studio & RM iPhones",
+  "license": "MIT"
+}
