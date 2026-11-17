@@ -96,30 +96,30 @@
     </nav>
   </header>
 
-  <!-- ==================== HERO CINEMATOGRÁFICO SCROLL-DRIVEN (PADRÃO TEC2D) ==================== -->
+  <!-- ==================== HERO CINEMATOGRÁFICO RM IPHONES ==================== -->
   <section id="hero" class="t2d-cine" data-mode="video" aria-labelledby="cine-title">
     <div class="t2d-cine-stage">
       
-      <!-- Textos Sequenciais Apple que Acompanham a Rotação 3D (Coluna 1) -->
+      <!-- Textos Sequenciais Apple & Ações Imediatas (Coluna 1) -->
       <div class="t2d-cine-copy">
         <p class="t2d-cine-kicker">RM IPHONES • ESPECIALISTAS APPLE</p>
         
         <div class="t2d-cine-lines">
-          <h1 class="t2d-cine-line is-active" id="cine-title" style="opacity: 1; transform: translate3d(0, 0, 0);">
+          <h1 class="t2d-cine-line is-active" id="cine-title">
             Seu próximo <em>upgrade</em> começa aqui.
           </h1>
           <p class="t2d-cine-line" aria-hidden="true">
-            Do detalhe à <em>experiência<span class="t2d-cine-stop">.</span></em>
+            Potência máxima. <em>Estética impecável<span class="t2d-cine-stop">.</span></em>
           </p>
           <p class="t2d-cine-line" aria-hidden="true">
-            Cada detalhe no <em>lugar certo<span class="t2d-cine-stop">.</span></em>
+            Do detalhe à <em>experiência<span class="t2d-cine-stop">.</span></em>
           </p>
           <p class="t2d-cine-line" aria-hidden="true">
             Você escolhe. A <em>RM iPhones</em> cuida.
           </p>
         </div>
 
-        <p class="t2d-cine-support" style="opacity: 1; transform: translate3d(0, 0, 0);">
+        <p class="t2d-cine-support">
           Aparelhos novos lacrados, seminovos selecionados e procedência auditada com garantia formalizada.
         </p>
 
@@ -128,74 +128,66 @@
           <i></i>
         </div>
 
-        <p class="t2d-cine-status" aria-live="polite"></p>
+        <!-- Botões de Ação Imediata (CRO de Alta Conversão na Hero) -->
+        <div class="t2d-cine-actions">
+          <a href="#catalogo" class="btn btn-primary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+              <line x1="12" y1="18" x2="12.01" y2="18"></line>
+            </svg>
+            Ver Estoque em Tempo Real
+          </a>
+
+          <a href="#troca" class="btn btn-secondary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <polyline points="17 1 21 5 17 9"></polyline>
+              <path d="M3 11V9a4 4 0 0 1 4-4h14"></path>
+              <polyline points="7 23 3 19 7 15"></polyline>
+              <path d="M21 13v2a4 4 0 0 1-4 4H3"></path>
+            </svg>
+            Simular Troca
+          </a>
+
+          <a href="https://wa.me/5511999990000?text=Ol%C3%A1!%20Gostaria%20de%20consultar%20os%20iPhones%20dispon%C3%ADveis%20na%20RM%20iPhones." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.599 2.679-.702c.97.546 1.761.821 2.781.821 3.182 0 5.767-2.587 5.768-5.768.001-3.182-2.585-5.768-5.768-5.768zm3.364 8.163c-.14.394-.716.744-1.026.786-.31.042-.656.069-2.023-.497-1.368-.567-2.327-1.921-2.42-2.046-.094-.125-.758-1.009-.758-1.923 0-.914.478-1.365.647-1.551.17-.186.371-.233.495-.233.124 0 .248.002.355.008.113.006.265-.043.414.316.155.372.531 1.295.578 1.389.047.094.078.203.016.328-.063.125-.094.203-.188.312-.094.109-.198.243-.283.326-.094.092-.192.193-.083.38.109.188.484.798 1.04 1.293.715.637 1.317.834 1.504.927.188.094.298.079.407-.047.11-.125.469-.547.594-.734.125-.188.25-.156.422-.094.172.063 1.094.516 1.281.609.188.094.313.141.359.219.047.078.047.453-.093.847z"/>
+            </svg>
+            Chamar no WhatsApp
+          </a>
+        </div>
+
+        <!-- Badges de Autoridade -->
+        <div class="t2d-cine-badges">
+          <span class="cine-badge">⭐ +107K Clientes</span>
+          <span class="cine-badge">🛡️ Checklist 35 Itens</span>
+          <span class="cine-badge">💳 Em até 18x no Cartão</span>
+        </div>
       </div>
 
-      <!-- Frame de Vídeo do iPhone Sincronizado com o Scroll (Coluna 2) -->
+      <!-- Frame de Vídeo do iPhone 3D com Rotação Contínua (Coluna 2) -->
       <div class="t2d-cine-frame">
         <video 
           class="t2d-cine-video" 
           src="/video/tec2d-scroll/tec2d-scroll-desktop-dark.mp4"
           poster="/video/tec2d-scroll/tec2d-scroll-poster-dark.webp"
+          autoplay
+          loop
           muted 
           playsinline 
           preload="auto" 
-          aria-hidden="true" 
-          tabindex="-1"
+          aria-label="Apresentação 3D dos iPhones da RM iPhones"
         >
           <source src="/video/tec2d-scroll/tec2d-scroll-desktop-dark.mp4" type="video/mp4" />
         </video>
         <img 
-          src="/video/tec2d-scroll/tec2d-scroll-final-dark.webp" 
-          alt="iPhone Titânio RM iPhones" 
+          src="/video/tec2d-scroll/tec2d-scroll-poster-dark.webp" 
+          alt="iPhones Selecionados RM iPhones" 
           class="t2d-cine-fallback" 
           loading="lazy" 
           decoding="async" 
         />
       </div>
 
-      <!-- Indicador Inferior Central de Scroll -->
-      <div class="t2d-cine-cue" aria-hidden="true">
-        <span></span>Role para avançar
-      </div>
-
-      <!-- Véu de Transição para a Próxima Seção -->
-      <div class="t2d-cine-veil" aria-hidden="true"></div>
-
-    </div>
-  </section>
-
-  <!-- ==================== CONTEÚDO PRINCIPAL PÓS-CINEMA (PADRÃO TEC2D) ==================== -->
-  <div class="home-content-after-cinema">
-    
-    <!-- Barra de Ações Rápidas Pós-Hero -->
-    <div class="container" style="padding-top: 10px; padding-bottom: 20px;">
-      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; margin-bottom: 20px;">
-        <a href="#catalogo" class="btn btn-primary" style="padding: 14px 30px; font-size: 1rem;">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
-            <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
-            <line x1="12" y1="18" x2="12.01" y2="18"></line>
-          </svg>
-          Ver Estoque em Tempo Real
-        </a>
-
-        <a href="#troca" class="btn btn-secondary" style="padding: 14px 28px; font-size: 1rem;">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
-            <polyline points="17 1 21 5 17 9"></polyline>
-            <path d="M3 11V9a4 4 0 0 1 4-4h14"></path>
-            <polyline points="7 23 3 19 7 15"></polyline>
-            <path d="M21 13v2a4 4 0 0 1-4 4H3"></path>
-          </svg>
-          Simular Troca do Meu Usado
-        </a>
-
-        <a href="https://wa.me/5511999990000?text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20um%20especialista%20da%20RM%20iPhones." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" style="padding: 14px 28px; font-size: 1rem;">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.599 2.679-.702c.97.546 1.761.821 2.781.821 3.182 0 5.767-2.587 5.768-5.768.001-3.182-2.585-5.768-5.768-5.768zm3.364 8.163c-.14.394-.716.744-1.026.786-.31.042-.656.069-2.023-.497-1.368-.567-2.327-1.921-2.42-2.046-.094-.125-.758-1.009-.758-1.923 0-.914.478-1.365.647-1.551.17-.186.371-.233.495-.233.124 0 .248.002.355.008.113.006.265-.043.414.316.155.372.531 1.295.578 1.389.047.094.078.203.016.328-.063.125-.094.203-.188.312-.094.109-.198.243-.283.326-.094.092-.192.193-.083.38.109.188.484.798 1.04 1.293.715.637 1.317.834 1.504.927.188.094.298.079.407-.047.11-.125.469-.547.594-.734.125-.188.25-.156.422-.094.172.063 1.094.516 1.281.609.188.094.313.141.359.219.047.078.047.453-.093.847z"/>
-          </svg>
-          Chamar no WhatsApp
-        </a>
-      </div>
     </div>
   </section>
 

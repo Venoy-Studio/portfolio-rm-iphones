@@ -408,51 +408,56 @@ input:focus, select:focus, textarea:focus {
   --cine-faint: #56565e;
   --cine-accent: #e5c378; /* Titânio Dourado Apple de Alto Luxo */
   --cine-rail: rgba(255, 255, 255, 0.14);
-  --cine-progress: 0;
-  --cine-veil: 0;
   position: relative;
-  height: 440svh;
-  background: var(--cine-stage);
-}
-
-.t2d-cine-stage {
-  position: sticky;
-  top: 0;
-  height: 100svh;
-  max-height: 100svh;
-  width: 100%;
-  overflow: hidden;
-  background: var(--cine-stage);
-  display: grid;
-  grid-template-columns: minmax(0, 38%) minmax(0, 62%);
+  min-height: calc(100svh - 75px);
+  background: radial-gradient(circle at 70% 45%, rgba(229, 195, 120, 0.08) 0%, transparent 55%), #080808;
+  display: flex;
   align-items: center;
-  isolation: isolate;
-  padding-top: 80px;
+  overflow: hidden;
+  padding: 20px 0;
   box-sizing: border-box;
 }
 
-.t2d-cine-frame {
-  grid-column: 2;
-  grid-row: 1;
+.t2d-cine-stage {
   position: relative;
-  z-index: 1;
-  height: 100%;
-  max-height: 100svh;
-  min-width: 0;
+  width: 100%;
+  max-width: 1360px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 48%) minmax(0, 52%);
+  align-items: center;
+  padding: 0 clamp(1.5rem, 4vw, 4rem);
+  box-sizing: border-box;
+  gap: 32px;
+}
+
+.t2d-cine-copy {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+}
+
+.t2d-cine-frame {
+  position: relative;
+  z-index: 2;
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100%;
+  max-height: 80svh;
+  will-change: transform;
 }
 
-.t2d-cine-video,
-.t2d-cine-fallback {
+.t2d-cine-video {
   display: block;
   width: 100%;
-  height: 100%;
-  max-height: 100svh;
+  max-width: 680px;
+  max-height: 72svh;
   object-fit: contain;
-  object-position: center bottom;
-  background: var(--cine-stage);
+  object-position: center center;
+  background: transparent;
+  filter: drop-shadow(0 20px 50px rgba(0, 0, 0, 0.85));
 }
 
 .t2d-cine-fallback {
@@ -461,7 +466,10 @@ input:focus, select:focus, textarea:focus {
   right: 0;
   bottom: 0;
   left: 0;
+  display: block;
+  width: 100%;
   height: 100%;
+  object-fit: contain;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.4s ease;
@@ -475,30 +483,16 @@ input:focus, select:focus, textarea:focus {
   visibility: hidden;
 }
 
-.t2d-cine-video {
-  transition: opacity 0.3s ease;
-  pointer-events: none;
-}
-
-.t2d-cine-copy {
-  grid-column: 1;
-  grid-row: 1;
-  position: relative;
-  z-index: 3;
-  padding: 0 1.5rem 0 clamp(1.5rem, 5vw, 5rem);
-  min-width: 0;
-}
-
 .t2d-cine-kicker {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 0.6rem;
-  color: var(--cine-faint);
+  color: var(--cine-accent);
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  white-space: nowrap;
+  margin-bottom: 0.5rem;
 }
 
 .t2d-cine-kicker::before {
@@ -511,7 +505,7 @@ input:focus, select:focus, textarea:focus {
 
 .t2d-cine-lines {
   display: grid;
-  margin-top: 1.35rem;
+  margin-top: 0.5rem;
 }
 
 .t2d-cine-line {
@@ -519,13 +513,18 @@ input:focus, select:focus, textarea:focus {
   margin: 0;
   align-self: center;
   color: var(--cine-ink);
-  font-size: clamp(1.75rem, 2.85vw, 3.1rem);
-  line-height: 0.98;
-  letter-spacing: -0.045em;
+  font-size: clamp(2rem, 3.2vw, 3.5rem);
+  line-height: 1.05;
+  letter-spacing: -0.04em;
   font-weight: 800;
   opacity: 0;
   transform: translate3d(0, 12px, 0);
   will-change: opacity, transform;
+}
+
+.t2d-cine-line.is-active {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
 }
 
 .t2d-cine-line em {
@@ -538,22 +537,22 @@ input:focus, select:focus, textarea:focus {
 }
 
 .t2d-cine-support {
-  margin-top: 1.4rem;
-  max-width: 30ch;
+  margin-top: 1.2rem;
+  max-width: 42ch;
   color: var(--cine-muted);
   font-size: 15px;
-  line-height: 1.55;
-  opacity: 0;
-  transform: translate3d(0, 10px, 0);
+  line-height: 1.6;
+  opacity: 1;
   will-change: opacity, transform;
 }
 
 .t2d-cine-rail {
   position: relative;
-  margin-top: 2.6rem;
-  width: min(13rem, 60%);
-  height: 1px;
+  margin-top: 1.6rem;
+  width: min(14rem, 70%);
+  height: 2px;
   background: var(--cine-rail);
+  border-radius: 999px;
   overflow: hidden;
 }
 
@@ -565,154 +564,107 @@ input:focus, select:focus, textarea:focus {
   left: 0;
   display: block;
   background: var(--cine-accent);
-  transform: scaleX(var(--cine-progress));
+  transform: scaleX(0);
   transform-origin: left center;
 }
 
-.t2d-cine-status {
-  margin-top: 0.9rem;
-  color: var(--cine-faint);
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  min-height: 1rem;
+/* Botões de Ação na Hero */
+.t2d-cine-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-top: 2rem;
 }
 
-.t2d-cine-status.is-ready {
-  opacity: 0;
+.t2d-cine-actions .btn {
+  padding: 13px 22px;
+  font-size: 0.92rem;
+  border-radius: 14px;
 }
 
-.t2d-cine-cue {
-  position: absolute;
-  left: 50%;
-  bottom: clamp(1.25rem, 3.5vh, 2.25rem);
-  transform: translateX(-50%);
+/* Badges de Autoridade */
+.t2d-cine-badges {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-top: 1.4rem;
+}
+
+.cine-badge {
   display: inline-flex;
   align-items: center;
-  gap: 0.55rem;
+  gap: 6px;
   font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  white-space: nowrap;
-  pointer-events: none;
-  z-index: 3;
-  color: var(--cine-faint);
-}
-
-.t2d-cine-cue span {
-  width: 1.5rem;
-  height: 1px;
-  background: currentColor;
-  animation: t2dCineCue 2.4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
-}
-
-@keyframes t2dCineCue {
-  0%, 100% {
-    transform: scaleX(0.35);
-    opacity: 0.35;
-    transform-origin: left center;
-  }
-  50% {
-    transform: scaleX(1);
-    opacity: 1;
-    transform-origin: left center;
-  }
-}
-
-.t2d-cine-veil {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 5;
-  background: #080808;
-  opacity: var(--cine-veil);
-  pointer-events: none;
-  will-change: opacity;
-  transform: translateZ(0);
+  font-weight: 600;
+  color: #cbd5e1;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 5px 12px;
+  border-radius: 9999px;
+  letter-spacing: 0.02em;
 }
 
 .home-content-after-cinema {
   position: relative;
   z-index: 7;
   width: 100%;
-  min-width: 0;
-  margin-top: -24svh;
-  overflow-x: clip;
+  margin-top: 0;
 }
 
-@media (max-width: 720px) {
-  .home-content-after-cinema {
-    margin-top: -14svh;
-  }
-}
-
-/* RESPONSIVIDADE DO CINE HERO (PADRÃO TEC2D) */
-@media (max-width: 1023px) and (min-aspect-ratio: 1 / 1) {
-  .t2d-cine-stage {
-    grid-template-columns: minmax(0, 38%) minmax(0, 62%);
-  }
-}
-
-@media (max-width: 767px), (max-aspect-ratio: 1 / 1) {
+/* RESPONSIVIDADE DA HERO */
+@media (max-width: 900px) {
   .t2d-cine {
-    height: 380svh;
+    min-height: auto;
+    padding: 30px 0 40px;
   }
+
   .t2d-cine-stage {
-    grid-template-columns: minmax(0, 1fr);
-    grid-template-rows: auto minmax(0, 1fr);
-    align-items: start;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 0 20px;
+    text-align: center;
   }
+
+  .t2d-cine-kicker {
+    justify-content: center;
+  }
+
+  .t2d-cine-kicker::before {
+    display: none;
+  }
+
   .t2d-cine-copy {
-    grid-column: 1;
-    grid-row: 1;
-    width: 100%;
-    max-width: 100vw;
-    padding: 5rem clamp(1.35rem, 4vw, 3rem) 0;
-    overflow: hidden;
+    align-items: center;
   }
-  .t2d-cine-lines {
-    margin-top: 1rem;
-  }
+
   .t2d-cine-line {
-    font-size: clamp(1.75rem, 8.6vw, 2.6rem);
-    max-width: 100%;
+    font-size: clamp(1.8rem, 7vw, 2.6rem);
   }
-  .t2d-cine-line em {
-    display: block;
-  }
+
   .t2d-cine-support {
-    margin-top: 0.9rem;
-    max-width: 31ch;
+    max-width: 100%;
     font-size: 14px;
   }
-  .t2d-cine-rail {
-    margin-top: 1.5rem;
-    width: 8rem;
-  }
-  .t2d-cine-status {
-    margin-top: 0.7rem;
-  }
-  .t2d-cine-frame {
-    grid-column: 1;
-    grid-row: 2;
-    align-self: end;
-    height: auto;
+
+  .t2d-cine-actions {
+    justify-content: center;
     width: 100%;
-    aspect-ratio: 9 / 8;
-    max-height: 52svh;
-    margin-bottom: 2rem;
-    overflow: hidden;
   }
-  .t2d-cine-video,
-  .t2d-cine-fallback {
-    -o-object-fit: cover;
-    object-fit: cover;
-    -o-object-position: center bottom;
-    object-position: center bottom;
+
+  .t2d-cine-badges {
+    justify-content: center;
+  }
+
+  .t2d-cine-frame {
+    order: -1;
+    max-height: 48svh;
+  }
+
+  .t2d-cine-video {
+    max-height: 44svh;
+    max-width: 90vw;
   }
 }
 
