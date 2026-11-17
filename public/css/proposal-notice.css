@@ -1,0 +1,593 @@
+/* ==========================================================================
+   VENOY STUDIO ® • PROPOSAL NOTICE & FLOATING CARD
+   Identidade: Royal Blue (#0066FF) • Glassmorphism Anti-Slop • Ultra Clean
+   ========================================================================== */
+
+:root {
+  --vn-blue-primary: #0066FF;
+  --vn-blue-hover: #0052CC;
+  --vn-blue-glow: rgba(0, 102, 255, 0.35);
+  --vn-blue-soft: rgba(0, 102, 255, 0.12);
+  --vn-blue-border: rgba(0, 102, 255, 0.3);
+  --vn-bg-modal: #070e1e;
+  --vn-bg-card: rgba(7, 14, 28, 0.94);
+  --vn-text-main: #FFFFFF;
+  --vn-text-muted: #94A3B8;
+  --vn-text-subtle: #64748B;
+}
+
+/* --------------------------------------------------------------------------
+   1. MODAL DE APRESENTAÇÃO DA PROPOSTA (POP-UP INICIAL)
+   -------------------------------------------------------------------------- */
+
+.vn-proposal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  background-color: rgba(2, 6, 16, 0.82);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              visibility 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.vn-proposal-overlay.vn-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.vn-proposal-dialog {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  max-height: 90vh;
+  overflow-y: auto;
+  border-radius: 24px;
+  border: 1px solid var(--vn-blue-border);
+  background: radial-gradient(120% 120% at 50% 0%, #0d1b38 0%, #060b17 100%);
+  padding: 28px 28px 24px;
+  color: var(--vn-text-main);
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.9),
+              0 0 45px -5px var(--vn-blue-glow);
+  transform: translateY(20px) scale(0.97);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  scrollbar-width: none;
+}
+
+.vn-proposal-dialog::-webkit-scrollbar {
+  display: none;
+}
+
+.vn-proposal-overlay.vn-active .vn-proposal-dialog {
+  transform: translateY(0) scale(1);
+}
+
+/* Barra superior: Pill Tag & Botão Fechar */
+.vn-dialog-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.vn-badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  border: 1px solid var(--vn-blue-border);
+  background: var(--vn-blue-soft);
+  color: #93c5fd;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+}
+
+.vn-pulse-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 9999px;
+  background-color: #38bdf8;
+  box-shadow: 0 0 8px #38bdf8;
+  animation: vn-pulse 2s infinite cubic-bezier(0.4, 0, 0.6, 1);
+}
+
+@keyframes vn-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.85); }
+}
+
+.vn-btn-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--vn-text-muted);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.vn-btn-close:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: #FFFFFF;
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+/* Header: Logo & Título */
+.vn-dialog-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.vn-agency-logo {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  object-fit: cover;
+  border: 1px solid rgba(0, 102, 255, 0.4);
+  background: rgba(0, 0, 0, 0.4);
+  padding: 3px;
+  box-shadow: 0 8px 20px rgba(0, 102, 255, 0.25);
+  flex-shrink: 0;
+}
+
+.vn-dialog-title {
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 1.25;
+  color: #FFFFFF;
+  letter-spacing: -0.02em;
+  margin: 0 0 4px;
+}
+
+.vn-dialog-subtitle {
+  font-size: 13px;
+  font-weight: 500;
+  color: #60a5fa;
+  margin: 0;
+}
+
+.vn-dialog-subtitle strong {
+  color: #93c5fd;
+  text-decoration: underline;
+  text-decoration-color: rgba(0, 102, 255, 0.6);
+  text-underline-offset: 3px;
+}
+
+/* Descrição Principal */
+.vn-dialog-desc {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #cbd5e1;
+  margin: 0 0 18px;
+}
+
+.vn-dialog-desc strong {
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+/* 3 Cards de Informação */
+.vn-feature-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.vn-feature-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(13, 27, 56, 0.5);
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.vn-feature-card:hover {
+  border-color: rgba(0, 102, 255, 0.4);
+  background: rgba(13, 27, 56, 0.75);
+}
+
+.vn-feature-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+  background: var(--vn-blue-soft);
+  color: #60a5fa;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.vn-feature-body strong {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 2px;
+}
+
+.vn-feature-body p {
+  font-size: 11px;
+  line-height: 1.5;
+  color: #94a3b8;
+  margin: 0;
+}
+
+/* Card Instagram Venoy Studio */
+.vn-instagram-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 16px;
+  border-radius: 14px;
+  border: 1px solid var(--vn-blue-border);
+  background: rgba(0, 102, 255, 0.08);
+  text-decoration: none;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.vn-instagram-card:hover {
+  background: rgba(0, 102, 255, 0.16);
+  border-color: var(--vn-blue-primary);
+  transform: translateY(-1px);
+}
+
+.vn-instagram-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.vn-instagram-icon-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  background: rgba(0, 102, 255, 0.2);
+  color: #38bdf8;
+  flex-shrink: 0;
+}
+
+.vn-instagram-text-tag {
+  display: block;
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #60a5fa;
+}
+
+.vn-instagram-handle {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+.vn-instagram-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #93c5fd;
+}
+
+/* Botão Principal CTA */
+.vn-btn-explore {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 13px 20px;
+  border-radius: 14px;
+  border: none;
+  background: linear-gradient(135deg, #0066FF 0%, #0047BA 100%);
+  color: #FFFFFF;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 10px 24px rgba(0, 102, 255, 0.35);
+  transition: all 0.25s ease;
+}
+
+.vn-btn-explore:hover {
+  background: linear-gradient(135deg, #1a75ff 0%, #0052cc 100%);
+  box-shadow: 0 14px 30px rgba(0, 102, 255, 0.45);
+  transform: translateY(-1.5px);
+}
+
+.vn-sub-note {
+  text-align: center;
+  font-size: 10px;
+  color: var(--vn-text-subtle);
+  margin: 12px 0 0;
+}
+
+
+/* --------------------------------------------------------------------------
+   2. O CARD FLUTUANTE NO CANTO (APÓS SAIR DO POP-UP • DEIXE BEM TOP)
+   -------------------------------------------------------------------------- */
+
+.vn-floating-card-wrapper {
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  z-index: 99990;
+  max-width: 330px;
+  width: calc(100vw - 32px);
+  pointer-events: none;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.vn-floating-card-wrapper.vn-visible {
+  pointer-events: auto;
+}
+
+/* Estado Expandido: Card Top */
+.vn-floating-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 14px 16px;
+  border-radius: 18px;
+  border: 1px solid rgba(0, 102, 255, 0.35);
+  background: var(--vn-bg-card);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 16px 40px -8px rgba(0, 0, 0, 0.7),
+              0 0 25px -4px rgba(0, 102, 255, 0.25);
+  opacity: 0;
+  transform: translateY(24px) scale(0.95);
+  transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.25s ease;
+}
+
+.vn-floating-card-wrapper.vn-visible .vn-floating-card {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.vn-floating-card:hover {
+  border-color: rgba(0, 102, 255, 0.55);
+}
+
+/* Topo do Card */
+.vn-card-top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.vn-card-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.vn-card-mini-logo {
+  width: 32px;
+  height: 32px;
+  border-radius: 9px;
+  object-fit: cover;
+  border: 1px solid rgba(0, 102, 255, 0.4);
+  background: rgba(0, 0, 0, 0.4);
+  padding: 2px;
+  box-shadow: 0 4px 12px rgba(0, 102, 255, 0.25);
+  flex-shrink: 0;
+}
+
+.vn-card-title-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.vn-card-title {
+  font-size: 13px;
+  font-weight: 800;
+  color: #FFFFFF;
+  line-height: 1.2;
+}
+
+.vn-card-status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 9px;
+  font-weight: 700;
+  color: #38bdf8;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.vn-card-status-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #38bdf8;
+  box-shadow: 0 0 6px #38bdf8;
+  animation: vn-pulse 1.8s infinite;
+}
+
+.vn-card-btn-minimize {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--vn-text-subtle);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.vn-card-btn-minimize:hover {
+  background: rgba(255, 255, 255, 0.14);
+  color: #FFFFFF;
+}
+
+/* Corpo do Card */
+.vn-card-body-text {
+  font-size: 11px;
+  line-height: 1.45;
+  color: #cbd5e1;
+  margin: 0;
+}
+
+.vn-card-body-text strong {
+  color: #93c5fd;
+  font-weight: 600;
+}
+
+/* Ações do Card */
+.vn-card-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-top: 4px;
+}
+
+.vn-card-btn-details {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #0066FF 0%, #0052CC 100%);
+  color: #FFFFFF;
+  font-size: 11px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 102, 255, 0.3);
+  transition: all 0.2s ease;
+}
+
+.vn-card-btn-details:hover {
+  background: linear-gradient(135deg, #1a75ff 0%, #0047BA 100%);
+  transform: translateY(-1px);
+}
+
+.vn-card-btn-instagram {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #cbd5e1;
+  font-size: 11px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.vn-card-btn-instagram:hover {
+  background: rgba(0, 102, 255, 0.15);
+  border-color: rgba(0, 102, 255, 0.4);
+  color: #FFFFFF;
+}
+
+/* --------------------------------------------------------------------------
+   3. ESTADO MINIMIZADO (PÍLULA COMPACTA ELEGANTE)
+   -------------------------------------------------------------------------- */
+
+.vn-floating-pill {
+  display: none;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 14px 8px 10px;
+  border-radius: 9999px;
+  border: 1px solid rgba(0, 102, 255, 0.35);
+  background: var(--vn-bg-card);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  box-shadow: 0 10px 30px -4px rgba(0, 0, 0, 0.7),
+              0 0 18px -2px rgba(0, 102, 255, 0.3);
+  color: #FFFFFF;
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 700;
+  transition: all 0.25s ease;
+}
+
+.vn-floating-pill:hover {
+  border-color: var(--vn-blue-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 14px 35px -4px rgba(0, 0, 0, 0.8),
+              0 0 24px -2px rgba(0, 102, 255, 0.45);
+}
+
+.vn-floating-pill img {
+  width: 22px;
+  height: 22px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+/* Toggle de exibição quando minimizado */
+.vn-floating-card-wrapper.vn-minimized .vn-floating-card {
+  display: none;
+}
+
+.vn-floating-card-wrapper.vn-minimized .vn-floating-pill {
+  display: inline-flex;
+}
+
+/* Responsividade Mobile */
+@media (max-width: 640px) {
+  .vn-floating-card-wrapper {
+    bottom: 16px;
+    left: 16px;
+    max-width: calc(100vw - 32px);
+  }
+
+  .vn-proposal-dialog {
+    padding: 22px 18px 20px;
+    border-radius: 20px;
+  }
+
+  .vn-dialog-title {
+    font-size: 19px;
+  }
+}
